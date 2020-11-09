@@ -28,6 +28,24 @@ def forward(speed=0.5, hold_time=0):
 
     base.set_speed(0.0, 0.0)
 
+def left(angle=90):
+    """
+
+    :param angle:
+    :return:
+    """
+
+    if angle > 360:
+        raise ValueError('The angle has to be smaller than 360')
+
+    hold_time = angle/360
+
+    base.set_speed(0.0, 0.1)
+
+    time.sleep(hold_time)
+    
+    base.set_speed(0.0, 0.0)
+
 
 if __name__ == '__main__':
-    forward(0.3,1)
+    forward(0.3, 4)
