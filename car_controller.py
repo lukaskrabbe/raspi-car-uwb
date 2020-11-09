@@ -6,7 +6,7 @@
 from uni_scripts import base
 import time
 
-def forward(speed=0.5, time=0):
+def forward(speed=0.5, hold_time=0):
     """
     drives the vehicle forward
 
@@ -24,7 +24,7 @@ def forward(speed=0.5, time=0):
         base.set_speed(speed_tmp, speed_tmp)
         time.sleep(0.2)
 
-    time.sleep(time)
+    time.sleep(hold_time)
 
 
 
