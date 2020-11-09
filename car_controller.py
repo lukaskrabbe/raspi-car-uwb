@@ -26,6 +26,7 @@ def forward(speed=0.5, hold_time=0):
 
     time.sleep(hold_time)
 
+    base.set_speed(0.0, 0.0)
 
 
 if __name__ == '__main__':
