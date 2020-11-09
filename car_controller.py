@@ -38,7 +38,7 @@ def left(angle=90):
     if angle > 180:
         raise ValueError('The angle has to be smaller than 180')
 
-    hold_time = (angle/20)
+    hold_time = (angle/20.2)
 
     base.set_speed(0.0, 0.1)
 
