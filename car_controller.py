@@ -35,17 +35,17 @@ def left(angle=90):
     :return:
     """
 
-    if angle > 360:
-        raise ValueError('The angle has to be smaller than 360')
+    if angle > 180:
+        raise ValueError('The angle has to be smaller than 180')
 
     hold_time = angle/360
 
     base.set_speed(0.0, 0.1)
 
     time.sleep(hold_time)
-    
+
     base.set_speed(0.0, 0.0)
 
 
 if __name__ == '__main__':
-    forward(0.3, 4)
+    left(90)
