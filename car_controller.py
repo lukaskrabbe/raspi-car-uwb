@@ -76,4 +76,11 @@ def right(angle=90):
 
 
 if __name__ == '__main__':
+    
+    forward(speed=0.5, hold_time=2)
     left(90)
+    forward(speed=0.5, hold_time=2)
+    left(90)
+    forward(speed=0.5, hold_time=2)
+    left(90)
+
