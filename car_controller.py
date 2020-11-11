@@ -1,4 +1,7 @@
 """
+Car Controller, implements a easy Interface to drive the Car
+
+author: Lukas Krabbe
 
 """
 
@@ -30,8 +33,11 @@ def forward(speed=0.5, hold_time=0):
 
 def left(angle=90):
     """
+    makes a hard Turn to the left
 
-    :param angle:
+    ! angle is just a Approximation !
+
+    :param angle: angle on wich the Car should turn Right !Approximantion!
     :return:
     """
 
@@ -45,6 +51,28 @@ def left(angle=90):
     time.sleep(hold_time)
 
     base.set_speed(0.0, 0.0)
+
+def right(angle=90):
+    """
+    makes a hard Turn to the right
+
+    ! angle is just a Approximation !
+
+    :param angle: angle on wich the Car should turn Right !Approximantion!
+    :return:
+    """
+
+    if angle > 180:
+        raise ValueError('The angle has to be smaller than 180')
+
+    hold_time = (angle/18.75)
+
+    base.set_speed(0.1, 0.0)
+
+    time.sleep(hold_time)
+
+    base.set_speed(0.0, 0.0)
+
 
 
 if __name__ == '__main__':
